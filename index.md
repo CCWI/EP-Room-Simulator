@@ -1,6 +1,6 @@
 ---
-layout: default
-title: EnergyPlus Room Simulator
+layout: custom
+title: Home
 nav_order: 1
 description: "Get to know the tool EnergyPlus Room Simulator."
 permalink: /
@@ -8,7 +8,9 @@ permalink: /
 
 # EnergyPlus Room Simulator
 
-![Screenshot](images/Room.jpg)
+
+<img src="images/Room.jpg" alt="Screenshot" width="70%">
+
 *Screenshot from the application*
 
 
@@ -19,6 +21,14 @@ For this, an easy-to-use and straightforward GUI is provided, along with a REST 
 
 This documentation provides you with information on how to install and use this tool.
 
+
+---
+layout: custom
+title: Architecture
+parent: Home
+nav_order: 2
+---
+
 ## Architecture
 
 The application is primarily written in Python and uses the Python package eppy to work with EnergyPlus.
@@ -28,6 +38,12 @@ The following figure illustrates this architecture.
 ![Architecture](images/Architecture.jpg)
 *Architecture*
 
+---
+layout: custom
+title: Motivation
+parent: Home
+nav_order: 2
+---
 
 ## Motivation
 
@@ -37,5 +53,6 @@ In [Weber et al. 2020](https://dl.acm.org/doi/10.1145/3408308.3431124), the auth
 They propose that an approach which combines real-world data and simulation data can reduce the required real-world training data by half, and in the same time contribute to a more robust model. 
 This tool can provide an arbitrarily large amount of simulation data for this purpose, and it offers users without in-depth technical knowledge towards EnergyPlus to conduct and even automate simulations. 
 
-![Deep learning approach for occupancy detection](images/Approach.jpg)
+<img src="images/Approach.jpg" alt="Deep learning approach for occupancy detection" width="70%">
+
 *Deep learning approach for occupancy detection (Weber et al. 2020)*

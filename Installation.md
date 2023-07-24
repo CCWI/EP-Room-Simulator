@@ -81,5 +81,5 @@ The frontend configuration is contained in a separate file in the frontend direc
 | Port      | The port where the backend can be reached by the frontend.                                                                                                                                                                                      |backend|
 
 
-For more information regarding configurations (e.g. config.ini), please refer to [Error Management](https://kathisa.github.io/indoorclimatesimulation/ErrorManagement.html).
-
+For more information regarding configurations (e.g. config.ini), please refer to [Error Management]().
+https://ccwi.github.io//indoorclimatesimulation/ErrorManagement.html
