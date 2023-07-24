@@ -1,0 +1,17 @@
+Flask~=2.0.3
+Flask-RESTful~=0.3.9
+WTForms~=3.0.1
+requests~=2.28.1
+Werkzeug~=2.2.2
+webargs~=8.2.0
+pymongo~=4.3.2
+pandas~=1.5.1
+eppy~=0.5.60
+numpy~=1.23.4
+matplotlib~=3.6.2
+responses~=0.22.0
+plotly~=5.11.0
+marshmallow~=3.18.0
+ply~=3.11.0
+parseidf~=1.0.0
+flask-cors~=3.0.10
