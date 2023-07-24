@@ -26,7 +26,7 @@ This documentation provides you with information on how to install and use this 
 layout: custom
 title: Architecture
 parent: Home
-nav_order: 2
+nav_order: 1
 ---
 
 ## Architecture
@@ -42,7 +42,7 @@ The following figure illustrates this architecture.
 layout: custom
 title: Motivation
 parent: Home
-nav_order: 2
+nav_order: 1
 ---
 
 ## Motivation
