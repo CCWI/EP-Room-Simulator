@@ -17,7 +17,7 @@ It is divided into a frontend (GUI) and a backend (REST API), which are implemen
 ***
 ## Documentation
 
-Further documentation can be found [here](https://). 
+Further documentation can be found [here](https://ccwi.github.io/EP-Room-Simulator/). 
 
 ***
 
