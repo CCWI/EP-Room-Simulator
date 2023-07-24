@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="step_navbar">
+    <div class="step-item completed">
+        <div class="step_count">1</div>
+        <div class="step_name">File input</div>
+    </div>
+    <div class="step-item active">
+        <div class="step_count">2</div>
+        <div class="step_name">Occupancy</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">3</div>
+        <div class="step_name">Room</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">4</div>
+        <div class="step_name">Overview</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">5</div>
+        <div class="step_name">Results</div>
+    </div>
+</div>
+
+<br>
+<div style="text-align: center; justify-content: space-between">
+    <h3>1. Enter a timeframe for your simulation</h3>
+    <small><strong>Hint:</strong> Please note that the selected timeframe must be equal to the uploaded occupancy!
+        <p>If the uploaded occupancy is longer than the selected timeframe, the uploaded occupancy will be cut after the number of days needed.</p>
+        If the uploaded occupancy is shorter than the selected timeframe, the uploaded occupancy is filled up with data for no people present and the window closed. </small>
+</div>
+ <br>
+{% if not timeframe %}
+<div style="text-align: center; justify-content: space-between">
+
+    <form action="{{url_for('ocpUpload.ocpUploadPost')}}" method="post" enctype="multipart/form-data">
+        Start date: <input type="date" id="start_date" name="start_date" size="10" required="required">
+        End date: <input type="date" id="end_date" name="end_date" required="required">
+        <p></p>
+        <input type="submit" class="proceed_button" style="text-align: center;" value="Enter time frame"
+               name="timeframe_enter"/>
+    </form>
+</div>
+<br>
+{% endif %}
+{% if timeframe_error %}
+<div style="text-align: center;"><p class=error><strong>Error:</strong> {{ timeframe_error }}</div>
+<br>
+{% endif %}
+{% if timeframe %}
+<div style="text-align: center">
+    You have selected the timeframe for the simulation:
+    <div style="font-weight: bold"> {{timeframe}}</div>
+    <br>
+    <form action="{{url_for('ocpUpload.ocpUploadPost')}}" method="POST"
+          enctype="multipart/form-data">
+        <button class="delete_button" type="submit" name="delete_selected_timeframe" style="">Delete selected
+            timeframe
+        </button>
+    </form>
+</div>
+{% endif %}
+<br>
+
+<hr width= 50%>
+
+<div style="text-align: center">
+
+    <h3>2. Upload a custom occupancy file</h3>
+
+    {% if error %}
+    <div class="error-message"><p class=error>{{error}}! </div>
+    {% endif %}
+    {% if occupancyTitle %}
+    <div style="text-align: center;"><p class=error>You have successfully uploaded the occupancy file <b>{{occupancyTitle}}</b> </div>
+    {% endif %}
+
+    <form action="{{url_for('ocpUpload.ocpUploadPost')}}" method="POST"
+          enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" value="Choose file"/>
+        <p></p>
+        <input type="submit" class="button_add" style="text-align: center" value="Upload custom occupancy" name="custom_occupancy_upload"/>
+    </form>
+</div>
+
+<div style="text-align: center">
+<h3>OR: Create custom occupancy</h3>
+    <a class="button_add" href="{{url_for('ocpCustom.ocpCustomGET')}}">Create Custom Occupancy</a>
+</div>
+<br>
+<div id="outer">
+    <div class="inner">
+        <form action="{{url_for('home.home_GET')}}">
+            <button class="back_button" type="submit"> &#8592 Return to Home</button>
+        </form>
+    </div>
+    <div class="inner">
+        <form action="{{url_for('fileHandler.fileHandlerPost')}}">
+            <button class="back_button" type="submit">Back</button>
+        </form>
+    </div>
+    <div class="inner">
+        <form action="{{url_for('ocpUpload.ocpUploadPost')}}" method="POST">
+            <button class="proceed_button" type="submit" name="OcpUpload_proceed" value="Proceed to the next step"/>
+            Proceed to Simulation-Parameters &#8594</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

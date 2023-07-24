@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for table in tables %}
+
+{{ table|safe }}
+{% endfor %}
+
+{% if error_code %}
+<div style="text-align: center">
+    <h2>Please be patient: </h2>{{error_code}}
+</div>
+{% endif %}
+
+<div id="outer">
+    <div class="inner">
+        <form action="{{url_for('home.home_GET')}}">
+            <button class="back_button" type="submit"> &#8592 Return to Home</button>
+        </form>
+    </div>
+    <div class="inner">
+        <form action="{{url_for('home.home_POST')}}" method="POST">
+            <button type="submit" class="back_button" id="back_history" name="return_Sim">Back</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var buttons = document.querySelectorAll('.reopensim-btsn');
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(){
+            var simId = button.value;
+            checkCsvData(simId);
+        });
+    });
+</script>
+<script>
+    var buttons = document.querySelectorAll('.button-sim-id');
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(){
+            var simId = button.value;
+            checkCsvDataSimId(simId);
+        });
+    });
+</script>
+<script>
+    function checkCsvData(sim_id) {
+        $.ajax({
+            url: '/simHistory/get_ocp',
+            method: 'GET',
+            data: { sim_id: sim_id },
+            success: function(response) {
+                if (response === 'Not available') {
+                    // Perform action when csv_data is not available
+                    window.location.href = 'http://localhost:100/startSimOnlyIdf?simulation_id=' + sim_id;
+                } else {
+                    // Perform action when csv_data is available
+                    window.location.href = 'http://localhost:100/StartSim?simulation_id=' + sim_id;
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
+<script>
+    function checkCsvDataSimId(sim_id) {
+        $.ajax({
+            url: '/simHistory/get_ocp',
+            method: 'GET',
+            data: { sim_id: sim_id },
+            success: function(response) {
+                if (response === 'Not available') {
+                    // Perform action when csv_data is not available
+                    window.location.href = 'http://localhost:100/startSimOnlyIdf?simulation_id=' + sim_id;
+                } else {
+                    // Perform action when csv_data is available
+                    window.location.href = 'http://localhost:100/viewResult?simulation_id=' + sim_id;
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
+{% endblock %}

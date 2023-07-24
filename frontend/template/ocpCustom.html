@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="step_navbar">
+    <div class="step-item completed">
+        <div class="step_count">1</div>
+        <div class="step_name">File input</div>
+    </div>
+    <div class="step-item active">
+        <div class="step_count">2</div>
+        <div class="step_name">Occupancy</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">3</div>
+        <div class="step_name">Room</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">4</div>
+        <div class="step_name">Overview</div>
+    </div>
+    <div class="step-item">
+        <div class="step_count">5</div>
+        <div class="step_name">Results</div>
+    </div>
+</div>
+
+<br>
+<div style="text-align: center; justify-content: space-between">
+    <h3>1. Enter a timeframe for your simulation</h3>
+</div>
+{% if not timeframe %}
+<div style="text-align: center; justify-content: space-between">
+
+    <form action="{{url_for('ocpCustom.ocpCustomPost')}}" method="post" enctype="multipart/form-data">
+        Start date: <input type="date" id="start_date" name="start_date" size="10" required="required">
+        End date: <input type="date" id="end_date" name="end_date" required="required">
+        <p></p>
+        <input type="submit" class="proceed_button" style="text-align: center;" value="Enter time frame"
+               name="timeframe_enter"/>
+    </form>
+</div>
+<br>
+{% endif %}
+{% if timeframe_error %}
+<div style="text-align: center;"><p class=error><strong>Error:</strong> {{ timeframe_error }}</div>
+<br>
+{% endif %}
+{% if timeframe %}
+<div style="text-align: center">
+    You have selected the timeframe for the simulation:
+    <div style="font-weight: bold"> {{timeframe}}</div>
+    <br>
+    <form action="{{url_for('ocpCustom.ocpCustomPost')}}" method="POST"
+          enctype="multipart/form-data">
+        <button class="delete_button" type="submit" name="delete_selected_timeframe" style="">Delete selected
+            timeframe
+        </button>
+    </form>
+</div>
+{% endif %}
+<br>
+<hr width = 50%>
+<div style="text-align: center">
+    <h3>2. Create custom occupancy for your simulation</h3>
+</div>
+<br>
+<form action="{{url_for('ocpCustom.ocpCustomPost')}}" method="POST"
+      enctype="multipart/form-data">
+
+    <table id="Custom_occupancy" style="text-align: center">
+        <tr>
+            <th>Date</th>
+            <th>Start (HH:MM)</th>
+            <th>End (HH:MM)</th>
+            <th># People</th>
+            <th>Window</th>
+            <th></th>
+        </tr>
+    </table>
+
+    <br>
+    <div style="text-align: center;">
+        <button type="button" class="button_add" onclick="AddRow()">Add Row</button>
+
+        <button type="button" class="button_add" onclick="VerifyData()">Verify Data</button>
+
+    </div>
+    <br>
+
+</form>
+<div style="text-align: center;">
+    <p id="ocp_hint"></p>
+    <input type="submit" class="home_button" value="Create occupancy"
+           id="occupancy_submit" onclick="CreateOCP()"
+           name="post_occupancy_table" disabled="disabled" onmouseover="DisplayHint()"/>
+</div>
+
+<br>
+<div style="text-align: center;">
+    <form action="{{url_for('ocpUpload.ocpUploadGET')}}">
+            <button class="button_add" type="submit"> &#8592 Back to choosing an occupancy file</button>
+        </form>
+</div>
+
+<div style="text-align: center">
+    <p id="error_ocp"></p>
+</div>
+<br>
+<div id="outer">
+    <div class="inner">
+        <form action="{{url_for('home.home_GET')}}">
+            <button class="back_button" type="submit"> &#8592 Return to Home</button>
+        </form>
+    </div>
+    <div class="inner">
+        <form action="{{url_for('fileHandler.fileHandlerPost')}}">
+            <button class="back_button" type="submit">Back</button>
+        </form>
+    </div>
+    <div class="inner">
+        <form action="{{url_for('ocpCustom.ocpCustomPost')}}" method="POST">
+            <button class="proceed_button" id="proceed_ocp" type="submit" name="OcpCustom_proceed" disabled="disabled"
+                    onmouseover="DisplayProceedHint()" value="Proceed to the next step"/>
+            Proceed to Simulation-Parameters &#8594</button>
+        </form>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    function AddRow() {
+        try {
+            var table = document.getElementById("Custom_occupancy");
+            var row = table.insertRow();
+            var cell_Date = row.insertCell(0);
+            var cell_Start = row.insertCell(1);
+            var cell_End = row.insertCell(2);
+            var cell_People = row.insertCell(3);
+            var cell_Window = row.insertCell(4);
+            var cell_Delete = row.insertCell(5);
+
+
+            cell_Date.innerHTML = '<td><input type="date" required="required">';
+            cell_Start.innerHTML = '<td><input type="time" required="required">';
+            cell_End.innerHTML = '<td><input type="time" required="required">';
+            cell_People.innerHTML = '<td><input type="number" value="0" min="0" required="required">';
+            cell_Window.innerHTML = '<td><select name="window"> ' +
+                '<option value ="0">Closed window</option>' +
+                '<option value ="1">Open window</option>' +
+                '</select>';
+            cell_Delete.innerHTML = '<td><input type="button" value="Delete" class="button_add" onclick="DeleteRow(this)"></td>'
+
+
+        } catch (error) {
+            console.error(error)
+        }
+
+
+    }
+
+
+    function DeleteRow(r) {
+        try {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("Custom_occupancy").deleteRow(i);
+            document.getElementById("occupancy_submit").disabled = true;
+        } catch (error) {
+            console.log("Nothing to delete");
+            console.error(error);
+        }
+
+    }
+
+    function VerifyData() {
+        try {
+            document.getElementById("ocp_hint").innerHTML = ""
+            var table = document.getElementById("Custom_occupancy");
+            var rowCount = table.rows.length;
+            data = [];
+
+            for (let r = 1; r < rowCount; r++) {
+                row_data = []
+                for (let c = 0; c < 5; c++) {
+                    var value = document.getElementById("Custom_occupancy").rows[r].cells[c].children[0].value;
+                    row_data.push(value)
+                }
+                data.push(row_data)
+
+            }
+            $.post("/ocpCustom/Verify", {
+                javascript_data: data
+            });
+            $.get("/ocpCustom/Verify", function (value) {
+                var base_phrase = "No"
+                var return_value = JSON.parse(value)
+                if (return_value.Error === base_phrase) {
+                    document.getElementById("occupancy_submit").disabled = false;
+                    document.getElementById("error_ocp").innerHTML = "Verification successful!"
+
+                } else {
+                    document.getElementById("error_ocp").innerHTML = "<h3>Error</h3> " + return_value.Error;
+                    document.getElementById("occupancy_submit").disabled = true;
+                    document.getElementById("proceed_ocp").disabled = true;
+                }
+            });
+
+        } catch (e) {
+            console.error(e);
+        }
+
+    }
+
+    function DisplayHint() {
+        if (document.getElementById("occupancy_submit").disabled === true) {
+            document.getElementById("ocp_hint").innerHTML = "<small>Please verify your data before creating an occupancy.</small>";
+        }
+
+    }
+
+    function DisplayProceedHint() {
+        if (document.getElementById("proceed_ocp").disabled === true) {
+            document.getElementById("ocp_hint").innerHTML = "<small>You need to create a valid occupancy before proceeding.</small>";
+        }
+    }
+
+    function CreateOCP() {
+        $.post("ocpCustom/Create");
+        document.getElementById("proceed_ocp").disabled = false;
+        document.getElementById("error_ocp").innerHTML = "<h3>Success</h3>" + "Successfully created a custom occupancy.";
+
+
+    }
+
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="intro">
+        <h1 class="main-title">EnergyPlus Room Simulator</h1>
+        <p>
+            Use this webinterface to create and run EnergyPlus simulations of single rooms.
+        </p>
+        <p>
+            Previous simulations can be viewed within the simulation database.
+        </p>
+        <br>
+        <form action="{{url_for('home.home_POST')}}" method="POST">
+            <input type="submit" class="home_button" id="new_Sim" name="new_Sim" value="Start a new simulation">
+            <p>
+        </form>
+        {% if status is true %}
+        <form action="{{url_for('home.home_POST')}}" method="POST">
+            <input type="submit" class="home_button" id="return_Sim" name="return_Sim" value="Return to current simulation">
+        </form>
+        {%endif%}
+    </div>
+</div>
+
+{% endblock %}
