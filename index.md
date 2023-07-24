@@ -1,5 +1,5 @@
 ---
-layout: custom
+layout: default
 title: Home
 nav_order: 1
 description: "Get to know the tool EnergyPlus Room Simulator."
@@ -22,13 +22,6 @@ For this, an easy-to-use and straightforward GUI is provided, along with a REST 
 This documentation provides you with information on how to install and use this tool.
 
 
----
-layout: custom
-title: Architecture
-parent: Home
-nav_order: 1
----
-
 ## Architecture
 
 The application is primarily written in Python and uses the Python package eppy to work with EnergyPlus.
@@ -38,12 +31,6 @@ The following figure illustrates this architecture.
 ![Architecture](images/Architecture.jpg)
 *Architecture*
 
----
-layout: custom
-title: Motivation
-parent: Home
-nav_order: 1
----
 
 ## Motivation
 
