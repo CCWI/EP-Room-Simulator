@@ -1,0 +1,2531 @@
+  Version,22.2;
+
+  Timestep,6;
+
+  LifeCycleCost:Parameters,
+    Life Cycle Cost Parameters,  !- Name
+    EndOfYear,               !- Discounting Convention
+    ConstantDollar,          !- Inflation Approach
+    0.03,                    !- Real Discount Rate
+    ,                        !- Nominal Discount Rate
+    ,                        !- Inflation
+    ,                        !- Base Date Month
+    2011,                    !- Base Date Year
+    ,                        !- Service Date Month
+    2011,                    !- Service Date Year
+    25,                      !- Length of Study Period in Years
+    ,                        !- Tax rate
+    None;                    !- Depreciation Method
+
+  LifeCycleCost:UsePriceEscalation,
+    U.S. Avg  Commercial-Electricity,  !- LCC Price Escalation Name
+    Electricity,             !- Resource
+    2011,                    !- Escalation Start Year
+    January,                 !- Escalation Start Month
+    0.9838,                  !- Year 1 Escalation
+    0.9730,                  !- Year 2 Escalation
+    0.9632,                  !- Year 3 Escalation
+    0.9611,                  !- Year 4 Escalation
+    0.9571,                  !- Year 5 Escalation
+    0.9553,                  !- Year 6 Escalation
+    0.9539,                  !- Year 7 Escalation
+    0.9521,                  !- Year 8 Escalation
+    0.9546,                  !- Year 9 Escalation
+    0.9550,                  !- <none>
+    0.9553,                  !- <none>
+    0.9564,                  !- <none>
+    0.9575,                  !- <none>
+    0.9596,                  !- <none>
+    0.9618,                  !- <none>
+    0.9614,                  !- <none>
+    0.9618,                  !- <none>
+    0.9618,                  !- <none>
+    0.9593,                  !- <none>
+    0.9589,                  !- <none>
+    0.9607,                  !- <none>
+    0.9625,                  !- <none>
+    0.9650,                  !- <none>
+    0.9708,                  !- <none>
+    0.9751,                  !- <none>
+    0.9762,                  !- <none>
+    0.9766,                  !- <none>
+    0.9766,                  !- <none>
+    0.9769,                  !- <none>
+    0.9773;                  !- <none>
+
+  LifeCycleCost:UsePriceEscalation,
+    U.S. Avg  Commercial-Distillate Oil,  !- LCC Price Escalation Name
+    FuelOilNo1,              !- Resource
+    2011,                    !- Escalation Start Year
+    January,                 !- Escalation Start Month
+    0.9714,                  !- Year 1 Escalation
+    0.9730,                  !- Year 2 Escalation
+    0.9942,                  !- Year 3 Escalation
+    1.0164,                  !- Year 4 Escalation
+    1.0541,                  !- Year 5 Escalation
+    1.0928,                  !- Year 6 Escalation
+    1.1267,                  !- Year 7 Escalation
+    1.1580,                  !- Year 8 Escalation
+    1.1792,                  !- Year 9 Escalation
+    1.1967,                  !- <none>
+    1.2200,                  !- <none>
+    1.2333,                  !- <none>
+    1.2566,                  !- <none>
+    1.2709,                  !- <none>
+    1.2826,                  !- <none>
+    1.2985,                  !- <none>
+    1.3102,                  !- <none>
+    1.3250,                  !- <none>
+    1.3261,                  !- <none>
+    1.3282,                  !- <none>
+    1.3324,                  !- <none>
+    1.3356,                  !- <none>
+    1.3431,                  !- <none>
+    1.3510,                  !- <none>
+    1.3568,                  !- <none>
+    1.3606,                  !- <none>
+    1.3637,                  !- <none>
+    1.3674,                  !- <none>
+    1.3706,                  !- <none>
+    1.3743;                  !- <none>
+
+  LifeCycleCost:UsePriceEscalation,
+    U.S. Avg  Commercial-Residual Oil,  !- LCC Price Escalation Name
+    FuelOilNo2,              !- Resource
+    2011,                    !- Escalation Start Year
+    January,                 !- Escalation Start Month
+    0.8469,                  !- Year 1 Escalation
+    0.8257,                  !- Year 2 Escalation
+    0.8681,                  !- Year 3 Escalation
+    0.8988,                  !- Year 4 Escalation
+    0.9289,                  !- Year 5 Escalation
+    0.9604,                  !- Year 6 Escalation
+    0.9897,                  !- Year 7 Escalation
+    1.0075,                  !- Year 8 Escalation
+    1.0314,                  !- Year 9 Escalation
+    1.0554,                  !- <none>
+    1.0861,                  !- <none>
+    1.1278,                  !- <none>
+    1.1497,                  !- <none>
+    1.1620,                  !- <none>
+    1.1743,                  !- <none>
+    1.1852,                  !- <none>
+    1.1948,                  !- <none>
+    1.2037,                  !- <none>
+    1.2071,                  !- <none>
+    1.2119,                  !- <none>
+    1.2139,                  !- <none>
+    1.2194,                  !- <none>
+    1.2276,                  !- <none>
+    1.2365,                  !- <none>
+    1.2420,                  !- <none>
+    1.2461,                  !- <none>
+    1.2509,                  !- <none>
+    1.2550,                  !- <none>
+    1.2591,                  !- <none>
+    1.2638;                  !- <none>
+
+  LifeCycleCost:UsePriceEscalation,
+    U.S. Avg  Commercial-Natural gas,  !- LCC Price Escalation Name
+    NaturalGas,              !- Resource
+    2011,                    !- Escalation Start Year
+    January,                 !- Escalation Start Month
+    0.9823,                  !- Year 1 Escalation
+    0.9557,                  !- Year 2 Escalation
+    0.9279,                  !- Year 3 Escalation
+    0.9257,                  !- Year 4 Escalation
+    0.9346,                  !- Year 5 Escalation
+    0.9412,                  !- Year 6 Escalation
+    0.9512,                  !- Year 7 Escalation
+    0.9645,                  !- Year 8 Escalation
+    0.9856,                  !- Year 9 Escalation
+    1.0067,                  !- <none>
+    1.0222,                  !- <none>
+    1.0410,                  !- <none>
+    1.0610,                  !- <none>
+    1.0787,                  !- <none>
+    1.0942,                  !- <none>
+    1.1098,                  !- <none>
+    1.1220,                  !- <none>
+    1.1308,                  !- <none>
+    1.1386,                  !- <none>
+    1.1486,                  !- <none>
+    1.1619,                  !- <none>
+    1.1763,                  !- <none>
+    1.1918,                  !- <none>
+    1.2118,                  !- <none>
+    1.2284,                  !- <none>
+    1.2439,                  !- <none>
+    1.2605,                  !- <none>
+    1.2772,                  !- <none>
+    1.2938,                  !- <none>
+    1.3115;                  !- <none>
+
+  LifeCycleCost:UsePriceEscalation,
+    U.S. Avg  Commercial-Coal,  !- LCC Price Escalation Name
+    Coal,                    !- Resource
+    2011,                    !- Escalation Start Year
+    January,                 !- Escalation Start Month
+    0.9970,                  !- Year 1 Escalation
+    1.0089,                  !- Year 2 Escalation
+    1.0089,                  !- Year 3 Escalation
+    0.9941,                  !- Year 4 Escalation
+    0.9941,                  !- Year 5 Escalation
+    1.0000,                  !- Year 6 Escalation
+    1.0030,                  !- Year 7 Escalation
+    1.0059,                  !- Year 8 Escalation
+    1.0089,                  !- Year 9 Escalation
+    1.0119,                  !- <none>
+    1.0148,                  !- <none>
+    1.0178,                  !- <none>
+    1.0208,                  !- <none>
+    1.0267,                  !- <none>
+    1.0297,                  !- <none>
+    1.0356,                  !- <none>
+    1.0415,                  !- <none>
+    1.0534,                  !- <none>
+    1.0564,                  !- <none>
+    1.0593,                  !- <none>
+    1.0653,                  !- <none>
+    1.0712,                  !- <none>
+    1.0742,                  !- <none>
+    1.0801,                  !- <none>
+    1.0831,                  !- <none>
+    1.0831,                  !- <none>
+    1.0861,                  !- <none>
+    1.0890,                  !- <none>
+    1.0920,                  !- <none>
+    1.0950;                  !- <none>
+
+  Building,
+    Building 1,              !- Name
+    0,                       !- North Axis {deg}
+    City,                    !- Terrain
+    ,                        !- Loads Convergence Tolerance Value {W}
+    ,                        !- Temperature Convergence Tolerance Value {deltaC}
+    FullExteriorWithReflections,  !- Solar Distribution
+    ,                        !- Maximum Number of Warmup Days
+    ;                        !- Minimum Number of Warmup Days
+
+  Zone,
+    RL_Office_27214585,      !- Name
+    0,                       !- Direction of Relative North {deg}
+    0,                       !- X Origin {m}
+    0,                       !- Y Origin {m}
+    0,                       !- Z Origin {m}
+    ,                        !- Type
+    1,                       !- Multiplier
+    ,                        !- Ceiling Height {m}
+    ,                        !- Volume {m3}
+    ,                        !- Floor Area {m2}
+    ,                        !- Zone Inside Convection Algorithm
+    ,                        !- Zone Outside Convection Algorithm
+    Yes;                     !- Part of Total Floor Area
+
+  BuildingSurface:Detailed,
+    Face_6e0f74aa,           !- Name
+    Floor,                   !- Surface Type
+    Generic Interior Floor,  !- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    1.7746479222419,6.62307621135332,0,  !- X,Y,Z ==> Vertex 1 {m}
+    5.3253520777581,4.57307621135332,0,  !- X,Y,Z ==> Vertex 2 {m}
+    2.3253520777581,-0.623076211353316,0,  !- X,Y,Z ==> Vertex 3 {m}
+    -1.2253520777581,1.42692378864668,0;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Face_7e97331e,           !- Name
+    Ceiling,                 !- Surface Type
+    Generic Interior Ceiling,!- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    2.3253520777581,-0.623076211353316,3,  !- X,Y,Z ==> Vertex 1 {m}
+    5.3253520777581,4.57307621135332,3,  !- X,Y,Z ==> Vertex 2 {m}
+    1.7746479222419,6.62307621135332,3,  !- X,Y,Z ==> Vertex 3 {m}
+    -1.2253520777581,1.42692378864668,3;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Face_c1ff7b9b,           !- Name
+    Wall,                    !- Surface Type
+    Generic Interior Wall,   !- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    1.7746479222419,6.62307621135332,3,  !- X,Y,Z ==> Vertex 1 {m}
+    1.7746479222419,6.62307621135332,0,  !- X,Y,Z ==> Vertex 2 {m}
+    -1.2253520777581,1.42692378864668,0,  !- X,Y,Z ==> Vertex 3 {m}
+    -1.2253520777581,1.42692378864668,3;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Face_c385bd7c,           !- Name
+    Wall,                    !- Surface Type
+    Generic Interior Wall,   !- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    5.3253520777581,4.57307621135332,3,  !- X,Y,Z ==> Vertex 1 {m}
+    5.3253520777581,4.57307621135332,0,  !- X,Y,Z ==> Vertex 2 {m}
+    1.7746479222419,6.62307621135332,0,  !- X,Y,Z ==> Vertex 3 {m}
+    1.7746479222419,6.62307621135332,3;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Face_dccb8c96,           !- Name
+    Wall,                    !- Surface Type
+    Generic Interior Wall,   !- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Adiabatic,               !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    2.3253520777581,-0.623076211353316,3,  !- X,Y,Z ==> Vertex 1 {m}
+    2.3253520777581,-0.623076211353316,0,  !- X,Y,Z ==> Vertex 2 {m}
+    5.3253520777581,4.57307621135332,0,  !- X,Y,Z ==> Vertex 3 {m}
+    5.3253520777581,4.57307621135332,3;  !- X,Y,Z ==> Vertex 4 {m}
+
+  BuildingSurface:Detailed,
+    Face_e42d7c6a,           !- Name
+    Wall,                    !- Surface Type
+    wall_stock,              !- Construction Name
+    RL_Office_27214585,      !- Zone Name
+    ,                        !- Space Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    ,                        !- Number of Vertices
+    -1.2253520777581,1.42692378864668,3,  !- X,Y,Z ==> Vertex 1 {m}
+    -1.2253520777581,1.42692378864668,0,  !- X,Y,Z ==> Vertex 2 {m}
+    2.3253520777581,-0.623076211353316,0,  !- X,Y,Z ==> Vertex 3 {m}
+    2.3253520777581,-0.623076211353316,3;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Window_1,                !- Name
+    Window,                  !- Surface Type
+    ShadedWindowConstruction_add79a08,            !- Construction Name
+    Face_e42d7c6a,           !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    ,                        !- Number of Vertices
+    -1.12672140677154,1.36997934420224,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    -1.12672140677154,1.36997934420224,1,  !- X,Y,Z ==> Vertex 2 {m}
+    -0.140414696905928,0.800534899757795,1,  !- X,Y,Z ==> Vertex 3 {m}
+    -0.140414696905928,0.800534899757795,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Window_2,                !- Name
+    Window,                  !- Surface Type
+    ShadedWindowConstruction_add79a08,            !- Construction Name
+    Face_e42d7c6a,           !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    ,                        !- Number of Vertices
+    0.0568466450671941,0.686646010868906,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    0.0568466450671941,0.686646010868906,1,  !- X,Y,Z ==> Vertex 2 {m}
+    1.0431533549328,0.117201566424462,1,  !- X,Y,Z ==> Vertex 3 {m}
+    1.0431533549328,0.117201566424462,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  FenestrationSurface:Detailed,
+    Window_3,                !- Name
+    Window,                  !- Surface Type
+    ShadedWindowConstruction_add79a08,            !- Construction Name
+    Face_e42d7c6a,           !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    ,                        !- Number of Vertices
+    1.24041469690593,0.00331267753557302,2.8,  !- X,Y,Z ==> Vertex 1 {m}
+    1.24041469690593,0.00331267753557302,1,  !- X,Y,Z ==> Vertex 2 {m}
+    2.22672140677154,-0.566131766908871,1,  !- X,Y,Z ==> Vertex 3 {m}
+    2.22672140677154,-0.566131766908871,2.8;  !- X,Y,Z ==> Vertex 4 {m}
+
+  ZoneControl:Thermostat,
+    RL_Office_27214585 Thermostat,  !- Name
+    RL_Office_27214585,      !- Zone or ZoneList Name
+    RL_Office_27214585 Thermostat Schedule,  !- Control Type Schedule Name
+    ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
+    Thermostat Setpoint Dual Setpoint 1,  !- Control 1 Name
+    ,                        !- Control 2 Object Type
+    ,                        !- Control 2 Name
+    ,                        !- Control 3 Object Type
+    ,                        !- Control 3 Name
+    ,                        !- Control 4 Object Type
+    ,                        !- Control 4 Name
+    0;                       !- Temperature Difference Between Cutout And Setpoint {deltaC}
+
+  Schedule:Compact,
+    RL_Office_27214585 Thermostat Schedule,  !- Name
+    RL_Office_27214585 Thermostat Schedule Type Limits,  !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,4;          !- Field 3
+
+  ScheduleTypeLimits,
+    RL_Office_27214585 Thermostat Schedule Type Limits,  !- Name
+    0,                       !- Lower Limit Value
+    4,                       !- Upper Limit Value
+    DISCRETE;                !- Numeric Type
+
+  ThermostatSetpoint:DualSetpoint,
+    Thermostat Setpoint Dual Setpoint 1,  !- Name
+    SeasonalSchedule_610b18b8,  !- Heating Setpoint Temperature Schedule Name
+    setpoint_cooling;     !- Cooling Setpoint Temperature Schedule Name
+
+  ScheduleTypeLimits,
+    Temperature,             !- Name
+    -273.15,                 !- Lower Limit Value
+    ,                        !- Upper Limit Value
+    Continuous,              !- Numeric Type
+    temperature;             !- Unit Type
+
+  Schedule:Day:Interval,
+    Schedule Day 4,          !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    Schedule Day 3,          !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    Schedule Day 5,          !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Sunday,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - Jan1-Apr29,  !- Name
+    Schedule Day 4,          !- Sunday Schedule:Day Name
+    Schedule Day 3,          !- Monday Schedule:Day Name
+    Schedule Day 3,          !- Tuesday Schedule:Day Name
+    Schedule Day 3,          !- Wednesday Schedule:Day Name
+    Schedule Day 3,          !- Thursday Schedule:Day Name
+    Schedule Day 3,          !- Friday Schedule:Day Name
+    Schedule Day 4,          !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - Apr30-May6,  !- Name
+    Schedule Day 4,          !- Sunday Schedule:Day Name
+    Schedule Day 5,          !- Monday Schedule:Day Name
+    Schedule Day 5,          !- Tuesday Schedule:Day Name
+    Schedule Day 5,          !- Wednesday Schedule:Day Name
+    Schedule Day 5,          !- Thursday Schedule:Day Name
+    Schedule Day 5,          !- Friday Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Day:Interval,
+    Schedule Day 2,          !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    -100;                    !- Value Until Time 1
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - May7-May27,  !- Name
+    setpoint_heating_real_Sunday,  !- Sunday Schedule:Day Name
+    Schedule Day 5,          !- Monday Schedule:Day Name
+    Schedule Day 5,          !- Tuesday Schedule:Day Name
+    Schedule Day 5,          !- Wednesday Schedule:Day Name
+    Schedule Day 5,          !- Thursday Schedule:Day Name
+    Schedule Day 5,          !- Friday Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - May28-Jun3,  !- Name
+    setpoint_heating_real_Sunday,  !- Sunday Schedule:Day Name
+    Schedule Day 5,          !- Monday Schedule:Day Name
+    Schedule Day 5,          !- Tuesday Schedule:Day Name
+    Schedule Day 5,          !- Wednesday Schedule:Day Name
+    Schedule Day 2,          !- Thursday Schedule:Day Name
+    Schedule Day 2,          !- Friday Schedule:Day Name
+    Schedule Day 2,          !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - Jun4-Sep30,  !- Name
+    Schedule Day 2,          !- Sunday Schedule:Day Name
+    Schedule Day 2,          !- Monday Schedule:Day Name
+    Schedule Day 2,          !- Tuesday Schedule:Day Name
+    Schedule Day 2,          !- Wednesday Schedule:Day Name
+    Schedule Day 2,          !- Thursday Schedule:Day Name
+    Schedule Day 2,          !- Friday Schedule:Day Name
+    Schedule Day 2,          !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Week:Daily,
+    SeasonalSchedule_610b18b8 Week Rule - Oct1-Dec31,  !- Name
+    setpoint_heating_real_Sunday,  !- Sunday Schedule:Day Name
+    Schedule Day 5,          !- Monday Schedule:Day Name
+    Schedule Day 5,          !- Tuesday Schedule:Day Name
+    Schedule Day 5,          !- Wednesday Schedule:Day Name
+    Schedule Day 5,          !- Thursday Schedule:Day Name
+    Schedule Day 5,          !- Friday Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- Saturday Schedule:Day Name
+    setpoint_heating_real_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_heating_real_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_heating_real_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    SeasonalSchedule_610b18b8,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    SeasonalSchedule_610b18b8 Week Rule - Jan1-Apr29,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    4,                       !- End Month 1
+    29,                      !- End Day 1
+    SeasonalSchedule_610b18b8 Week Rule - Apr30-May6,  !- Schedule:Week Name 2
+    4,                       !- Start Month 2
+    30,                      !- Start Day 2
+    5,                       !- End Month 2
+    6,                       !- End Day 2
+    SeasonalSchedule_610b18b8 Week Rule - May7-May27,  !- Schedule:Week Name 3
+    5,                       !- Start Month 3
+    7,                       !- Start Day 3
+    5,                       !- End Month 3
+    27,                      !- End Day 3
+    SeasonalSchedule_610b18b8 Week Rule - May28-Jun3,  !- Schedule:Week Name 4
+    5,                       !- Start Month 4
+    28,                      !- Start Day 4
+    6,                       !- End Month 4
+    3,                       !- End Day 4
+    SeasonalSchedule_610b18b8 Week Rule - Jun4-Sep30,  !- Schedule:Week Name 5
+    6,                       !- Start Month 5
+    4,                       !- Start Day 5
+    9,                       !- End Month 5
+    30,                      !- End Day 5
+    SeasonalSchedule_610b18b8 Week Rule - Oct1-Dec31,  !- Schedule:Week Name 6
+    10,                      !- Start Month 6
+    1,                       !- Start Day 6
+    12,                      !- End Month 6
+    31;                      !- End Day 6
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday_SmrDsn 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Hol 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Sunday,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    100;                     !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    Schedule Day 1,          !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    100,                     !- Value Until Time 1
+    19:00,                   !- Time 2
+    50,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    100;                     !- Value Until Time 3
+
+  Schedule:Week:Daily,
+    setpoint_cooling Week Rule - Jan1-Dec31,  !- Name
+    setpoint_cooling_Sunday,  !- Sunday Schedule:Day Name
+    Schedule Day 1,          !- Monday Schedule:Day Name
+    Schedule Day 1,          !- Tuesday Schedule:Day Name
+    Schedule Day 1,          !- Wednesday Schedule:Day Name
+    Schedule Day 1,          !- Thursday Schedule:Day Name
+    Schedule Day 1,          !- Friday Schedule:Day Name
+    setpoint_cooling_Sunday,  !- Saturday Schedule:Day Name
+    setpoint_cooling_Hol 1,  !- Holiday Schedule:Day Name
+    setpoint_cooling_Sunday_SmrDsn 1,  !- SummerDesignDay Schedule:Day Name
+    setpoint_cooling_Sunday_SmrDsn_WntrDsn 1,  !- WinterDesignDay Schedule:Day Name
+    setpoint_cooling_Sunday,  !- CustomDay1 Schedule:Day Name
+    setpoint_cooling_Sunday;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    setpoint_cooling,     !- Name
+    Temperature,             !- Schedule Type Limits Name
+    setpoint_cooling Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Sunday_SmrDsn 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    100;                     !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Sunday_SmrDsn_WntrDsn 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    100,                     !- Value Until Time 1
+    19:00,                   !- Time 2
+    50,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    100;                     !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Hol 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    100;                     !- Value Until Time 1
+
+  ZoneVentilation:WindandStackOpenArea,
+    Window_1_Opening,        !- Name
+    RL_Office_27214585,      !- Zone or Space Name
+    1.025,                   !- Opening Area {m2}
+    natural_ventilation,  !- Opening Area Fraction Schedule Name
+    0,                       !- Opening Effectiveness {dimensionless}
+    210,                     !- Effective Angle {deg}
+    0.315,                   !- Height Difference {m}
+    0.45,                    !- Discharge Coefficient for Opening
+    22,                      !- Minimum Indoor Temperature {C}
+    ,                        !- Minimum Indoor Temperature Schedule Name
+    100,                     !- Maximum Indoor Temperature {C}
+    ,                        !- Maximum Indoor Temperature Schedule Name
+    -100,                    !- Delta Temperature {deltaC}
+    ,                        !- Delta Temperature Schedule Name
+    0,                       !- Minimum Outdoor Temperature {C}
+    ,                        !- Minimum Outdoor Temperature Schedule Name
+    25,                      !- Maximum Outdoor Temperature {C}
+    ,                        !- Maximum Outdoor Temperature Schedule Name
+    40;                      !- Maximum Wind Speed {m/s}
+
+  ScheduleTypeLimits,
+    Fractional,              !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    Continuous,              !- Numeric Type
+    dimensionless;           !- Unit Type
+
+  Schedule:Day:Interval,
+    natural_ventilation_Day Schedule,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    1;                       !- Value Until Time 1
+
+  Schedule:Week:Daily,
+    natural_ventilation Week Rule - Jan1-Dec31,  !- Name
+    natural_ventilation_Day Schedule,  !- Sunday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Monday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Tuesday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Wednesday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Thursday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Friday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Saturday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- Holiday Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- SummerDesignDay Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- WinterDesignDay Schedule:Day Name
+    natural_ventilation_Day Schedule,  !- CustomDay1 Schedule:Day Name
+    natural_ventilation_Day Schedule;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    natural_ventilation,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    natural_ventilation Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  ZoneVentilation:WindandStackOpenArea,
+    Window_2_Opening,        !- Name
+    RL_Office_27214585,      !- Zone or Space Name
+    1.025,                   !- Opening Area {m2}
+    natural_ventilation,  !- Opening Area Fraction Schedule Name
+    0,                       !- Opening Effectiveness {dimensionless}
+    210,                     !- Effective Angle {deg}
+    0.315,                   !- Height Difference {m}
+    0.45,                    !- Discharge Coefficient for Opening
+    22,                      !- Minimum Indoor Temperature {C}
+    ,                        !- Minimum Indoor Temperature Schedule Name
+    100,                     !- Maximum Indoor Temperature {C}
+    ,                        !- Maximum Indoor Temperature Schedule Name
+    -100,                    !- Delta Temperature {deltaC}
+    ,                        !- Delta Temperature Schedule Name
+    0,                       !- Minimum Outdoor Temperature {C}
+    ,                        !- Minimum Outdoor Temperature Schedule Name
+    25,                      !- Maximum Outdoor Temperature {C}
+    ,                        !- Maximum Outdoor Temperature Schedule Name
+    40;                      !- Maximum Wind Speed {m/s}
+
+  ZoneVentilation:WindandStackOpenArea,
+    Window_3_Opening,        !- Name
+    RL_Office_27214585,      !- Zone or Space Name
+    1.025,                   !- Opening Area {m2}
+    natural_ventilation,  !- Opening Area Fraction Schedule Name
+    0,                       !- Opening Effectiveness {dimensionless}
+    210,                     !- Effective Angle {deg}
+    0.315,                   !- Height Difference {m}
+    0.45,                    !- Discharge Coefficient for Opening
+    22,                      !- Minimum Indoor Temperature {C}
+    ,                        !- Minimum Indoor Temperature Schedule Name
+    100,                     !- Maximum Indoor Temperature {C}
+    ,                        !- Maximum Indoor Temperature Schedule Name
+    -100,                    !- Delta Temperature {deltaC}
+    ,                        !- Delta Temperature Schedule Name
+    0,                       !- Minimum Outdoor Temperature {C}
+    ,                        !- Minimum Outdoor Temperature Schedule Name
+    25,                      !- Maximum Outdoor Temperature {C}
+    ,                        !- Maximum Outdoor Temperature Schedule Name
+    40;                      !- Maximum Wind Speed {m/s}
+
+  ZoneHVAC:EquipmentConnections,
+    RL_Office_27214585,      !- Zone Name
+    RL_Office_27214585 Equipment List,  !- Zone Conditioning Equipment List Name
+    RL_Office_27214585 Inlet Node List,  !- Zone Air Inlet Node or NodeList Name
+    RL_Office_27214585 Exhaust Node List,  !- Zone Air Exhaust Node or NodeList Name
+    Node 1;                  !- Zone Air Node Name
+
+  NodeList,
+    RL_Office_27214585 Inlet Node List,  !- Name
+    Node 3;                  !- Node 1 Name
+
+  NodeList,
+    RL_Office_27214585 Exhaust Node List,  !- Name
+    Node 2;                  !- Node 1 Name
+
+  ZoneHVAC:IdealLoadsAirSystem,
+    RL_Office_27214585 Ideal Loads Air System,  !- Name
+    ,                        !- Availability Schedule Name
+    Node 3,                  !- Zone Supply Air Node Name
+    Node 2,                  !- Zone Exhaust Air Node Name
+    ,                        !- System Inlet Air Node Name
+    50,                      !- Maximum Heating Supply Air Temperature {C}
+    13,                      !- Minimum Cooling Supply Air Temperature {C}
+    ,                        !- Maximum Heating Supply Air Humidity Ratio {kgWater/kgDryAir}
+    ,                        !- Minimum Cooling Supply Air Humidity Ratio {kgWater/kgDryAir}
+    LimitCapacity,           !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    Autosize,                !- Maximum Sensible Heating Capacity {W}
+    LimitFlowRateAndCapacity,!- Cooling Limit
+    Autosize,                !- Maximum Cooling Air Flow Rate {m3/s}
+    0,                       !- Maximum Total Cooling Capacity {W}
+    ,                        !- Heating Availability Schedule Name
+    ,                        !- Cooling Availability Schedule Name
+    ,                        !- Dehumidification Control Type
+    ,                        !- Cooling Sensible Heat Ratio {dimensionless}
+    ,                        !- Humidification Control Type
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Outdoor Air Inlet Node Name
+    None,                    !- Demand Controlled Ventilation Type
+    NoEconomizer,            !- Outdoor Air Economizer Type
+    ,                        !- Heat Recovery Type
+    0,                       !- Sensible Heat Recovery Effectiveness {dimensionless}
+    0;                       !- Latent Heat Recovery Effectiveness {dimensionless}
+
+  ZoneHVAC:EquipmentList,
+    RL_Office_27214585 Equipment List,  !- Name
+    SequentialLoad,          !- Load Distribution Scheme
+    ZoneHVAC:IdealLoadsAirSystem,  !- Zone Equipment 1 Object Type
+    RL_Office_27214585 Ideal Loads Air System,  !- Zone Equipment 1 Name
+    1,                       !- Zone Equipment 1 Cooling Sequence
+    1,                       !- Zone Equipment 1 Heating or No-Load Sequence
+    ,                        !- Zone Equipment 1 Sequential Cooling Fraction Schedule Name
+    ;                        !- Zone Equipment 1 Sequential Heating Fraction Schedule Name
+
+  Sizing:Zone,
+    RL_Office_27214585,      !- Zone or ZoneList Name
+    SupplyAirTemperature,    !- Zone Cooling Design Supply Air Temperature Input Method
+    14,                      !- Zone Cooling Design Supply Air Temperature {C}
+    11.11,                   !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
+    SupplyAirTemperature,    !- Zone Heating Design Supply Air Temperature Input Method
+    40,                      !- Zone Heating Design Supply Air Temperature {C}
+    11.11,                   !- Zone Heating Design Supply Air Temperature Difference {deltaC}
+    0.0085,                  !- Zone Cooling Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.008,                   !- Zone Heating Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    ,                        !- Design Specification Outdoor Air Object Name
+    ,                        !- Zone Heating Sizing Factor
+    ,                        !- Zone Cooling Sizing Factor
+    DesignDay,               !- Cooling Design Air Flow Method
+    0,                       !- Cooling Design Air Flow Rate {m3/s}
+    0.000762,                !- Cooling Minimum Air Flow per Zone Floor Area {m3/s-m2}
+    0,                       !- Cooling Minimum Air Flow {m3/s}
+    0,                       !- Cooling Minimum Air Flow Fraction
+    DesignDay,               !- Heating Design Air Flow Method
+    0,                       !- Heating Design Air Flow Rate {m3/s}
+    0.002032,                !- Heating Maximum Air Flow per Zone Floor Area {m3/s-m2}
+    0.1415762,               !- Heating Maximum Air Flow {m3/s}
+    0.3,                     !- Heating Maximum Air Flow Fraction
+    ,                        !- Design Specification Zone Air Distribution Object Name
+    No,                      !- Account for Dedicated Outdoor Air System
+    ,                        !- Dedicated Outdoor Air System Control Strategy
+    ,                        !- Dedicated Outdoor Air Low Setpoint Temperature for Design {C}
+    ,                        !- Dedicated Outdoor Air High Setpoint Temperature for Design {C}
+    Sensible Load Only No Latent Load,  !- Zone Load Sizing Method
+    HumidityRatioDifference, !- Zone Latent Cooling Design Supply Air Humidity Ratio Input Method
+    ,                        !- Zone Dehumidification Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.005,                   !- Zone Cooling Design Supply Air Humidity Ratio Difference {kgWater/kgDryAir}
+    HumidityRatioDifference, !- Zone Latent Heating Design Supply Air Humidity Ratio Input Method
+    ,                        !- Zone Humidification Design Supply Air Humidity Ratio {kgWater/kgDryAir}
+    0.005;                   !- Zone Humidification Design Supply Air Humidity Ratio Difference {kgWater/kgDryAir}
+
+  SimulationControl,
+    Yes,                     !- Do Zone Sizing Calculation
+    Yes,                     !- Do System Sizing Calculation
+    Yes,                     !- Do Plant Sizing Calculation
+    No,                      !- Run Simulation for Sizing Periods
+    Yes,                     !- Run Simulation for Weather File Run Periods
+    No,                      !- Do HVAC Sizing Simulation for Sizing Periods
+    ;                        !- Maximum Number of HVAC Sizing Simulation Passes
+
+  HeatBalanceAlgorithm,ConductionTransferFunction,200;
+
+  RunPeriod,
+    Run Period 1,            !- Name
+    1,                       !- Begin Month
+    1,                       !- Begin Day of Month
+    2006,                    !- Begin Year
+    12,                      !- End Month
+    31,                      !- End Day of Month
+    2006,                    !- End Year
+    Sunday,                  !- Day of Week for Start Day
+    No,                      !- Use Weather File Holidays and Special Days
+    No,                      !- Use Weather File Daylight Saving Period
+    No,                      !- Apply Weekend Holiday Rule
+    Yes,                     !- Use Weather File Rain Indicators
+    Yes;                     !- Use Weather File Snow Indicators
+
+  ShadowCalculation,
+    PixelCounting,           !- Shading Calculation Method
+    Periodic,                !- Shading Calculation Update Frequency Method
+    30,                      !- Shading Calculation Update Frequency
+    15000,                   !- Maximum Figures in Shadow Overlap Calculations
+    SutherlandHodgman,       !- Polygon Clipping Algorithm
+    512,                     !- Pixel Counting Resolution
+    SimpleSkyDiffuseModeling,!- Sky Diffuse Modeling Algorithm
+    No,                      !- Output External Shading Calculation Results
+    No,                      !- Disable Self-Shading Within Shading Zone Groups
+    No;                      !- Disable Self-Shading From Shading Zone Groups to Other Zones
+
+  Sizing:Parameters,
+    1.25,                    !- Heating Sizing Factor
+    1.15;                    !- Cooling Sizing Factor
+
+  GlobalGeometryRules,
+    UpperLeftCorner,         !- Starting Vertex Position
+    Counterclockwise,        !- Vertex Entry Direction
+    Relative,                !- Coordinate System
+    Relative,                !- Daylighting Reference Point Coordinate System
+    Relative;                !- Rectangular Surface Coordinate System
+
+  Material,
+    Generic 25mm Insulation, !- Name
+    MediumRough,             !- Roughness
+    0.05,                    !- Thickness {m}
+    0.03,                    !- Conductivity {W/m-K}
+    43,                      !- Density {kg/m3}
+    1210,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material,
+    Generic 25mm Wood,       !- Name
+    MediumSmooth,            !- Roughness
+    0.0254,                  !- Thickness {m}
+    0.15,                    !- Conductivity {W/m-K}
+    608,                     !- Density {kg/m3}
+    1630,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.5,                     !- Solar Absorptance
+    0.5;                     !- Visible Absorptance
+
+  Material,
+    Generic 50mm Insulation, !- Name
+    MediumRough,             !- Roughness
+    0.05,                    !- Thickness {m}
+    0.03,                    !- Conductivity {W/m-K}
+    43,                      !- Density {kg/m3}
+    1210,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material,
+    Generic Acoustic Tile,   !- Name
+    MediumSmooth,            !- Roughness
+    0.02,                    !- Thickness {m}
+    0.06,                    !- Conductivity {W/m-K}
+    368,                     !- Density {kg/m3}
+    590,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.2,                     !- Solar Absorptance
+    0.2;                     !- Visible Absorptance
+
+  Material,
+    Generic Brick,           !- Name
+    MediumRough,             !- Roughness
+    0.1,                     !- Thickness {m}
+    0.9,                     !- Conductivity {W/m-K}
+    1920,                    !- Density {kg/m3}
+    790,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.65,                    !- Solar Absorptance
+    0.65;                    !- Visible Absorptance
+
+  Material,
+    Generic Ceiling Air Gap, !- Name
+    Smooth,                  !- Roughness
+    0.1,                     !- Thickness {m}
+    0.556,                   !- Conductivity {W/m-K}
+    1.28,                    !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material,
+    Generic Gypsum Board,    !- Name
+    MediumSmooth,            !- Roughness
+    0.0127,                  !- Thickness {m}
+    0.16,                    !- Conductivity {W/m-K}
+    800,                     !- Density {kg/m3}
+    1090,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.5,                     !- Solar Absorptance
+    0.5;                     !- Visible Absorptance
+
+  Material,
+    Generic HW Concrete,     !- Name
+    MediumRough,             !- Roughness
+    0.2,                     !- Thickness {m}
+    1.95,                    !- Conductivity {W/m-K}
+    2240,                    !- Density {kg/m3}
+    900,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.8,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+  Material,
+    Generic LW Concrete,     !- Name
+    MediumRough,             !- Roughness
+    0.1,                     !- Thickness {m}
+    0.53,                    !- Conductivity {W/m-K}
+    1280,                    !- Density {kg/m3}
+    840,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.8,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+  Material,
+    Generic Painted Metal,   !- Name
+    Smooth,                  !- Roughness
+    0.0015,                  !- Thickness {m}
+    45,                      !- Conductivity {W/m-K}
+    7690,                    !- Density {kg/m3}
+    410,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.5,                     !- Solar Absorptance
+    0.5;                     !- Visible Absorptance
+
+  Material,
+    Generic Roof Membrane,   !- Name
+    MediumRough,             !- Roughness
+    0.01,                    !- Thickness {m}
+    0.16,                    !- Conductivity {W/m-K}
+    1120,                    !- Density {kg/m3}
+    1460,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.65,                    !- Solar Absorptance
+    0.65;                    !- Visible Absorptance
+
+  Material,
+    Generic Wall Air Gap,    !- Name
+    Smooth,                  !- Roughness
+    0.1,                     !- Thickness {m}
+    0.667,                   !- Conductivity {W/m-K}
+    1.28,                    !- Density {kg/m3}
+    1000,                    !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material,
+    Material 1,              !- Name
+    Smooth,                  !- Roughness
+    0.1,                     !- Thickness {m}
+    0.1,                     !- Conductivity {W/m-K}
+    0.1,                     !- Density {kg/m3}
+    100,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.65,                    !- Solar Absorptance
+    0.65;                    !- Visible Absorptance
+
+  Material,
+    Material 2,              !- Name
+    Smooth,                  !- Roughness
+    0.1,                     !- Thickness {m}
+    0.1,                     !- Conductivity {W/m-K}
+    0.1,                     !- Density {kg/m3}
+    100,                     !- Specific Heat {J/kg-K}
+    0.9,                     !- Thermal Absorptance
+    0.8,                     !- Solar Absorptance
+    0.8;                     !- Visible Absorptance
+
+  Material:NoMass,
+    insulation_ground_stock, !- Name
+    MediumRough,             !- Roughness
+    1.73022588933,           !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    insulation_roof_stock,   !- Name
+    MediumRough,             !- Roughness
+    0.222154414618,          !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.7,                     !- Solar Absorptance
+    0.7;                     !- Visible Absorptance
+
+  Material:NoMass,
+    insulation_wall_stock,   !- Name
+    MediumRough,             !- Roughness
+    2.29275002742,           !- Thermal Resistance {m2-K/W}
+    0.9,                     !- Thermal Absorptance
+    0.0629464374430815,      !- Solar Absorptance
+    0.0629464374430815;      !- Visible Absorptance
+
+  WindowMaterial:Gas,
+    Generic Window Air Gap,  !- Name
+    Air,                     !- Gas Type
+    0.0127;                  !- Thickness {m}
+
+  WindowMaterial:Gas,
+    Generic Window Argon Gap,!- Name
+    Argon,                   !- Gas Type
+    0.0127;                  !- Thickness {m}
+
+  WindowMaterial:Glazing,
+    Generic Clear Glass,     !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.006,                   !- Thickness {m}
+    0.77,                    !- Solar Transmittance at Normal Incidence
+    0.07,                    !- Front Side Solar Reflectance at Normal Incidence
+    0.07,                    !- Back Side Solar Reflectance at Normal Incidence
+    0.88,                    !- Visible Transmittance at Normal Incidence
+    0.08,                    !- Front Side Visible Reflectance at Normal Incidence
+    0.08,                    !- Back Side Visible Reflectance at Normal Incidence
+    0,                       !- Infrared Transmittance at Normal Incidence
+    0.84,                    !- Front Side Infrared Hemispherical Emissivity
+    0.84,                    !- Back Side Infrared Hemispherical Emissivity
+    1,                       !- Conductivity {W/m-K}
+    1,                       !- Dirt Correction Factor for Solar and Visible Transmittance
+    No;                      !- Solar Diffusing
+
+  WindowMaterial:Glazing,
+    Generic Low-e Glass,     !- Name
+    SpectralAverage,         !- Optical Data Type
+    ,                        !- Window Glass Spectral Data Set Name
+    0.006,                   !- Thickness {m}
+    0.45,                    !- Solar Transmittance at Normal Incidence
+    0.36,                    !- Front Side Solar Reflectance at Normal Incidence
+    0.36,                    !- Back Side Solar Reflectance at Normal Incidence
+    0.71,                    !- Visible Transmittance at Normal Incidence
+    0.21,                    !- Front Side Visible Reflectance at Normal Incidence
+    0.21,                    !- Back Side Visible Reflectance at Normal Incidence
+    0,                       !- Infrared Transmittance at Normal Incidence
+    0.84,                    !- Front Side Infrared Hemispherical Emissivity
+    0.047,                   !- Back Side Infrared Hemispherical Emissivity
+    1,                       !- Conductivity {W/m-K}
+    1,                       !- Dirt Correction Factor for Solar and Visible Transmittance
+    No;                      !- Solar Diffusing
+
+  WindowMaterial:SimpleGlazingSystem,
+    window_glass_stock,      !- Name
+    2.19,                    !- U-Factor {W/m2-K}
+    0.25,                     !- Solar Heat Gain Coefficient
+    0.6;                     !- Visible Transmittance
+	
+  WindowMaterial:Shade,
+	  ShadeMaterial_fd3c0e97,                 !- Name
+	  0.1,                                    !- Solar Transmittance {dimensionless}
+	  0.8,                                    !- Solar Reflectance {dimensionless}
+	  0.1,                                    !- Visible Transmittance {dimensionless}
+	  0.8,                                    !- Visible Reflectance {dimensionless}
+	  0.9,                                    !- Infrared Hemispherical Emissivity {dimensionless}
+	  0,                                      !- Infrared Transmittance {dimensionless}
+	  0.05,                                   !- Thickness {m}
+	  0.9,                                    !- Conductivity {W/m-K}
+	  0.05,                                   !- Shade to Glass Distance {m}
+	  0.5,                                    !- Top Opening Multiplier
+	  0.5,                                    !- Bottom Opening Multiplier
+	  0.5,                                    !- Left-Side Opening Multiplier
+	  0.5,                                    !- Right-Side Opening Multiplier
+	  0;                                      !- Airflow Permeability {dimensionless}
+
+  WindowShadingControl,
+	  Shading_Control_1,                      !- Name
+	  RL_Office_27214585,                     !- Zone Name
+	  1,                                      !- Shading Control Sequence Number
+	  ExteriorShade,                          !- Shading Type
+	  window_stock,                           !- Construction with Shading Name
+	  OnIfHighZoneAirTemperature,             !- Shading Control Type
+	  ,                                       !- Schedule Name
+	  22,                                     !- Setpoint {W/m2, W or deg C}
+	  No,                                     !- Shading Control Is Scheduled
+	  No,                                     !- Glare Control Is Active
+	  ,                                       !- Shading Device Material Name
+	  FixedSlatAngle,                         !- Type of Slat Angle Control for Blinds
+	  ,                                       !- Slat Angle Schedule Name
+	  ,                                       !- Setpoint 2 {BasedOnField A5}
+	  ,                                       !- Daylighting Control Object Name
+	  Sequential,                             !- Multiple Surface Control Type
+	  Window_1;                               !- Fenestration Surface 1 Name
+
+  WindowShadingControl,
+	  Shading_Control_2,                      !- Name
+	  RL_Office_27214585,                     !- Zone Name
+	  2,                                      !- Shading Control Sequence Number
+	  ExteriorShade,                          !- Shading Type
+	  window_stock,                           !- Construction with Shading Name
+	  OnIfHighZoneAirTemperature,             !- Shading Control Type
+	  ,                                       !- Schedule Name
+	  22,                                     !- Setpoint {W/m2, W or deg C}
+	  No,                                     !- Shading Control Is Scheduled
+	  No,                                     !- Glare Control Is Active
+	  ,                                       !- Shading Device Material Name
+	  FixedSlatAngle,                         !- Type of Slat Angle Control for Blinds
+	  ,                                       !- Slat Angle Schedule Name
+	  ,                                       !- Setpoint 2 {BasedOnField A5}
+	  ,                                       !- Daylighting Control Object Name
+	  Sequential,                             !- Multiple Surface Control Type
+	  Window_2;                               !- Fenestration Surface 1 Name
+	  
+   WindowShadingControl,
+	  Shading_Control_3,                      !- Name
+	  RL_Office_27214585,                     !- Zone Name
+	  3,                                      !- Shading Control Sequence Number
+	  ExteriorShade,                          !- Shading Type
+	  window_stock,                           !- Construction with Shading Name
+	  OnIfHighZoneAirTemperature,             !- Shading Control Type
+	  ,                                       !- Schedule Name
+	  22,                                     !- Setpoint {W/m2, W or deg C}
+	  No,                                     !- Shading Control Is Scheduled
+	  No,                                     !- Glare Control Is Active
+	  ,                                       !- Shading Device Material Name
+	  FixedSlatAngle,                         !- Type of Slat Angle Control for Blinds
+	  ,                                       !- Slat Angle Schedule Name
+	  ,                                       !- Setpoint 2 {BasedOnField A5}
+	  ,                                       !- Daylighting Control Object Name
+	  Sequential,                             !- Multiple Surface Control Type
+	  Window_3;                               !- Fenestration Surface 1 Name
+	  
+  Construction,
+    Generic Context,         !- Name
+    Material 2;              !- Outside Layer
+
+  Construction,
+    Generic Double Pane,     !- Name
+    Generic Low-e Glass,     !- Outside Layer
+    Generic Window Air Gap,  !- Layer 2
+    Generic Clear Glass;     !- Layer 3
+
+  Construction,
+    Generic Exposed Floor,   !- Name
+    Generic Painted Metal,   !- Outside Layer
+    Generic Ceiling Air Gap, !- Layer 2
+    Generic 50mm Insulation, !- Layer 3
+    Generic LW Concrete;     !- Layer 4
+
+  Construction,
+    Generic Exterior Door,   !- Name
+    Generic Painted Metal,   !- Outside Layer
+    Generic 25mm Insulation, !- Layer 2
+    Generic Painted Metal;   !- Layer 3
+
+  Construction,
+    Generic Exterior Wall,   !- Name
+    Generic Brick,           !- Outside Layer
+    Generic LW Concrete,     !- Layer 2
+    Generic 50mm Insulation, !- Layer 3
+    Generic Wall Air Gap,    !- Layer 4
+    Generic Gypsum Board;    !- Layer 5
+
+  Construction,
+    Generic Ground Slab,     !- Name
+    Generic 50mm Insulation, !- Outside Layer
+    Generic HW Concrete;     !- Layer 2
+
+  Construction,
+    Generic Interior Ceiling,!- Name
+    Generic LW Concrete,     !- Outside Layer
+    Generic Ceiling Air Gap, !- Layer 2
+    Generic Acoustic Tile;   !- Layer 3
+
+  Construction,
+    Generic Interior Door,   !- Name
+    Generic 25mm Wood;       !- Outside Layer
+
+  Construction,
+    Generic Interior Floor,  !- Name
+    Generic Acoustic Tile,   !- Outside Layer
+    Generic Ceiling Air Gap, !- Layer 2
+    Generic LW Concrete;     !- Layer 3
+
+  Construction,
+    Generic Interior Wall,   !- Name
+    Generic Gypsum Board,    !- Outside Layer
+    Generic Wall Air Gap,    !- Layer 2
+    Generic Gypsum Board;    !- Layer 3
+
+  Construction,
+    Generic Roof,            !- Name
+    Generic Roof Membrane,   !- Outside Layer
+    Generic 50mm Insulation, !- Layer 2
+    Generic LW Concrete,     !- Layer 3
+    Generic Ceiling Air Gap, !- Layer 4
+    Generic Acoustic Tile;   !- Layer 5
+
+  Construction,
+    Generic Shade,           !- Name
+    Material 1;              !- Outside Layer
+
+  Construction,
+    Generic Single Pane,     !- Name
+    Generic Clear Glass;     !- Outside Layer
+
+  Construction,
+    Generic Underground Roof,!- Name
+    Generic 50mm Insulation, !- Outside Layer
+    Generic HW Concrete,     !- Layer 2
+    Generic Ceiling Air Gap, !- Layer 3
+    Generic Acoustic Tile;   !- Layer 4
+
+  Construction,
+    Generic Underground Wall,!- Name
+    Generic 50mm Insulation, !- Outside Layer
+    Generic HW Concrete,     !- Layer 2
+    Generic Wall Air Gap,    !- Layer 3
+    Generic Gypsum Board;    !- Layer 4
+
+  Construction,
+    ground_stb_stock,        !- Name
+    insulation_ground_stock; !- Outside Layer
+
+  Construction,
+    roof_stb_stock,          !- Name
+    insulation_roof_stock;   !- Outside Layer
+
+  Construction,
+    wall_stock,              !- Name
+    insulation_wall_stock;   !- Outside Layer
+	
+  Construction,
+	  ShadedWindowConstruction_add79a08,      !- Name
+	  window_glass_stock;                     !- Layer 1
+
+  Construction,
+	  window_stock,                           !- Name
+	  ShadeMaterial_fd3c0e97,                 !- Layer 1
+	  window_glass_stock;                     !- Layer 2
+
+  Construction:AirBoundary,
+    Generic Air Boundary,    !- Name
+    None,                    !- Air Exchange Method
+    0,                       !- Simple Mixing Air Changes per Hour {1/hr}
+    ;                        !- Simple Mixing Schedule Name
+
+  ScheduleTypeLimits,
+    Activity Level,          !- Name
+    0,                       !- Lower Limit Value
+    ,                        !- Upper Limit Value
+    Continuous,              !- Numeric Type
+    activitylevel;           !- Unit Type
+
+  ScheduleTypeLimits,
+    OnOff,                   !- Name
+    0,                       !- Lower Limit Value
+    1,                       !- Upper Limit Value
+    Discrete,                !- Numeric Type
+    availability;            !- Unit Type
+
+  Schedule:Constant,Always On Discrete,OnOff,1;
+
+  Schedule:Day:Interval,
+    Always On_Day Schedule,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    1;                       !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    1;                       !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    0;                       !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Hol, !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    100;                     !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Monday,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    100,                     !- Value Until Time 1
+    19:00,                   !- Time 2
+    50,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    100;                     !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Sunday_SmrDsn,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    100;                     !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_cooling_Sunday_SmrDsn_WntrDsn,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    100,                     !- Value Until Time 1
+    19:00,                   !- Time 2
+    50,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    100;                     !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Hol,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday 1,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday_SmrDsn,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    07:00,                   !- Time 1
+    18,                      !- Value Until Time 1
+    19:00,                   !- Time 2
+    20,                      !- Value Until Time 2
+    24:00,                   !- Time 3
+    18;                      !- Value Until Time 3
+
+  Schedule:Day:Interval,
+    setpoint_heating_real_Monday_SmrDsn_WntrDsn,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    18;                      !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    setpoint_heating_Sunday,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    -100;                    !- Value Until Time 1
+
+  Schedule:Day:Interval,
+    Seated Adult Activity_Day Schedule,  !- Name
+    Activity Level,          !- Schedule Type Limits Name
+    No,                      !- Interpolate to Timestep
+    24:00,                   !- Time 1
+    120;                     !- Value Until Time 1
+
+  Schedule:Week:Daily,
+    Always On Week Rule - Jan1-Dec31,  !- Name
+    Always On_Day Schedule,  !- Sunday Schedule:Day Name
+    Always On_Day Schedule,  !- Monday Schedule:Day Name
+    Always On_Day Schedule,  !- Tuesday Schedule:Day Name
+    Always On_Day Schedule,  !- Wednesday Schedule:Day Name
+    Always On_Day Schedule,  !- Thursday Schedule:Day Name
+    Always On_Day Schedule,  !- Friday Schedule:Day Name
+    Always On_Day Schedule,  !- Saturday Schedule:Day Name
+    Always On_Day Schedule,  !- Holiday Schedule:Day Name
+    Always On_Day Schedule,  !- SummerDesignDay Schedule:Day Name
+    Always On_Day Schedule,  !- WinterDesignDay Schedule:Day Name
+    Always On_Day Schedule,  !- CustomDay1 Schedule:Day Name
+    Always On_Day Schedule;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Always On,               !- Name
+    Fractional,              !- Schedule Type Limits Name
+    Always On Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Week:Daily,
+    ConstantSchedule_dc7fa15c Week Rule - Jan1-Dec31,  !- Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Sunday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Monday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Tuesday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Wednesday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Thursday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Friday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Saturday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- Holiday Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- SummerDesignDay Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- WinterDesignDay Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule,  !- CustomDay1 Schedule:Day Name
+    ConstantSchedule_dc7fa15c_Day Schedule;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    ConstantSchedule_dc7fa15c,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    ConstantSchedule_dc7fa15c Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Week:Daily,
+    ConstantSchedule_e22c12ab Week Rule - Jan1-Dec31,  !- Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Sunday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Monday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Tuesday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Wednesday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Thursday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Friday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Saturday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- Holiday Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- SummerDesignDay Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- WinterDesignDay Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule,  !- CustomDay1 Schedule:Day Name
+    ConstantSchedule_e22c12ab_Day Schedule;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    ConstantSchedule_e22c12ab,  !- Name
+    Fractional,              !- Schedule Type Limits Name
+    ConstantSchedule_e22c12ab Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Week:Daily,
+    Seated Adult Activity Week Rule - Jan1-Dec31,  !- Name
+    Seated Adult Activity_Day Schedule,  !- Sunday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Monday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Tuesday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Wednesday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Thursday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Friday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Saturday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- Holiday Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- SummerDesignDay Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- WinterDesignDay Schedule:Day Name
+    Seated Adult Activity_Day Schedule,  !- CustomDay1 Schedule:Day Name
+    Seated Adult Activity_Day Schedule;  !- CustomDay2 Schedule:Day Name
+
+  Schedule:Year,
+    Seated Adult Activity,   !- Name
+    Activity Level,          !- Schedule Type Limits Name
+    Seated Adult Activity Week Rule - Jan1-Dec31,  !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Constant,Always Off Discrete,,0;
+
+  Schedule:Constant,Always On Continuous,,1;
+
+  OutdoorAir:Node,
+    Model Outdoor Air Node;  !- Name
+
+  Output:Table:SummaryReports,
+    AllSummary;              !- Report 1 Name
+
+  Site:Location,
+    Site 1,                  !- Name
+    0,                       !- Latitude {deg}
+    0,                       !- Longitude {deg}
+    0,                       !- Time Zone {hr}
+    0;                       !- Elevation {m}
+
+  Site:WaterMainsTemperature,
+    CorrelationFromWeatherFile;  !- Calculation Method
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Clg .4% Condns DB=>MWB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    29.5,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19,                      !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.6,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Clg .4% Condns DP=>MDB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    21.6,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Dewpoint,                !- Humidity Condition Type
+    17.2,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.6,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Clg .4% Condns Enth=>MDB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    27.5,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Enthalpy,                !- Humidity Condition Type
+    ,                        !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    58600,                   !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.6,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Clg .4% Condns WB=>MDB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    27.4,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19.7,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.6,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Htg 99.6% Condns DB,  !- Name
+    2,                       !- Month
+    21,                      !- Day of Month
+    WinterDesignDay,         !- Day Type
+    -11.9,                   !- Maximum Dry-Bulb Temperature {C}
+    0,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    -11.9,                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    90,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0;                       !- Sky Clearness
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Htg Wind 99.6% Condns WS=>MCDB,  !- Name
+    2,                       !- Month
+    21,                      !- Day of Month
+    WinterDesignDay,         !- Day Type
+    9.2,                     !- Maximum Dry-Bulb Temperature {C}
+    0,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    9.2,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    10.3,                    !- Wind Speed {m/s}
+    90,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0;                       !- Sky Clearness
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese Ann Hum_n 99.6% Condns DP=>MCDB,  !- Name
+    2,                       !- Month
+    21,                      !- Day of Month
+    WinterDesignDay,         !- Day Type
+    -10.4,                   !- Maximum Dry-Bulb Temperature {C}
+    0,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Dewpoint,                !- Humidity Condition Type
+    -15.1,                   !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    90,                      !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAEClearSky,          !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    ,                        !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    ,                        !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+    0;                       !- Sky Clearness
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese April .4% Condns DB=>MCWB,  !- Name
+    4,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    22.1,                    !- Maximum Dry-Bulb Temperature {C}
+    7.9,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    12.4,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.3,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.389,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.275;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese April .4% Condns WB=>MCDB,  !- Name
+    4,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    20,                      !- Maximum Dry-Bulb Temperature {C}
+    7.9,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    13.1,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.3,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.389,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.275;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese August .4% Condns DB=>MCWB,  !- Name
+    8,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    31.9,                    !- Maximum Dry-Bulb Temperature {C}
+    8.9,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19.4,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.4,                     !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.325;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese August .4% Condns WB=>MCDB,  !- Name
+    8,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    29,                      !- Maximum Dry-Bulb Temperature {C}
+    8.9,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    20.3,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.4,                     !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.325;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese December .4% Condns DB=>MCWB,  !- Name
+    12,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    14.1,                    !- Maximum Dry-Bulb Temperature {C}
+    5,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    8.2,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.292,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.468;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese December .4% Condns WB=>MCDB,  !- Name
+    12,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    12.6,                    !- Maximum Dry-Bulb Temperature {C}
+    5,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    9.7,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.292,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.468;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese February .4% Condns DB=>MCWB,  !- Name
+    2,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    16,                      !- Maximum Dry-Bulb Temperature {C}
+    6.2,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    9.6,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.3,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.321,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.384;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese February .4% Condns WB=>MCDB,  !- Name
+    2,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    15.2,                    !- Maximum Dry-Bulb Temperature {C}
+    6.2,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    9.8,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.3,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.321,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.384;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese January .4% Condns DB=>MCWB,  !- Name
+    1,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    12.6,                    !- Maximum Dry-Bulb Temperature {C}
+    5.5,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    7.6,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.4,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.296,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.448;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese January .4% Condns WB=>MCDB,  !- Name
+    1,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    11.2,                    !- Maximum Dry-Bulb Temperature {C}
+    5.5,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    8.4,                     !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.4,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.296,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.448;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese July .4% Condns DB=>MCWB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    32.9,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    20.5,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.9,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese July .4% Condns WB=>MCDB,  !- Name
+    7,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    29.9,                    !- Maximum Dry-Bulb Temperature {C}
+    8.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    21.3,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.9,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.406,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.289;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese June .4% Condns DB=>MCWB,  !- Name
+    6,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    29.9,                    !- Maximum Dry-Bulb Temperature {C}
+    8.3,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19.2,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.403,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.305;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese June .4% Condns WB=>MCDB,  !- Name
+    6,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    27.4,                    !- Maximum Dry-Bulb Temperature {C}
+    8.3,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19.9,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.403,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.305;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese March .4% Condns DB=>MCWB,  !- Name
+    3,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    20.7,                    !- Maximum Dry-Bulb Temperature {C}
+    7.1,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    11.7,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.5,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.354,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.342;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese March .4% Condns WB=>MCDB,  !- Name
+    3,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    20.4,                    !- Maximum Dry-Bulb Temperature {C}
+    7.1,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    11.8,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.5,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.354,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.342;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese May .4% Condns DB=>MCWB,  !- Name
+    5,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    25.8,                    !- Maximum Dry-Bulb Temperature {C}
+    8.5,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    16.1,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.398,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.283;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese May .4% Condns WB=>MCDB,  !- Name
+    5,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    23.1,                    !- Maximum Dry-Bulb Temperature {C}
+    8.5,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    17.6,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.398,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.283;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese November .4% Condns DB=>MCWB,  !- Name
+    11,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    15.9,                    !- Maximum Dry-Bulb Temperature {C}
+    5.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    10.4,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.318,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.481;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese November .4% Condns WB=>MCDB,  !- Name
+    11,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    14.1,                    !- Maximum Dry-Bulb Temperature {C}
+    5.8,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    11.3,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    2.1,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.318,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.481;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese October .4% Condns DB=>MCWB,  !- Name
+    10,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    23.6,                    !- Maximum Dry-Bulb Temperature {C}
+    7,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    15.2,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.346,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.447;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese October .4% Condns WB=>MCDB,  !- Name
+    10,                      !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    21.7,                    !- Maximum Dry-Bulb Temperature {C}
+    7,                       !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    16.2,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.346,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.447;                   !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese September .4% Condns DB=>MCWB,  !- Name
+    9,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    27.7,                    !- Maximum Dry-Bulb Temperature {C}
+    8.1,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    18.1,                    !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.376,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.37;                    !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  SizingPeriod:DesignDay,
+    Munich-Theresienwiese September .4% Condns WB=>MCDB,  !- Name
+    9,                       !- Month
+    21,                      !- Day of Month
+    SummerDesignDay,         !- Day Type
+    25.3,                    !- Maximum Dry-Bulb Temperature {C}
+    8.1,                     !- Daily Dry-Bulb Temperature Range {deltaC}
+    DefaultMultipliers,      !- Dry-Bulb Temperature Range Modifier Type
+    ,                        !- Dry-Bulb Temperature Range Modifier Day Schedule Name
+    Wetbulb,                 !- Humidity Condition Type
+    19,                      !- Wetbulb or DewPoint at Maximum Dry-Bulb {C}
+    ,                        !- Humidity Condition Day Schedule Name
+    ,                        !- Humidity Ratio at Maximum Dry-Bulb {kgWater/kgDryAir}
+    ,                        !- Enthalpy at Maximum Dry-Bulb {J/kg}
+    ,                        !- Daily Wet-Bulb Temperature Range {deltaC}
+    95232,                   !- Barometric Pressure {Pa}
+    1.8,                     !- Wind Speed {m/s}
+    270,                     !- Wind Direction {deg}
+    No,                      !- Rain Indicator
+    No,                      !- Snow Indicator
+    No,                      !- Daylight Saving Time Indicator
+    ASHRAETau,               !- Solar Model Indicator
+    ,                        !- Beam Solar Day Schedule Name
+    ,                        !- Diffuse Solar Day Schedule Name
+    0.376,                   !- ASHRAE Clear Sky Optical Depth for Beam Irradiance (taub) {dimensionless}
+    2.37;                    !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance (taud) {dimensionless}
+
+  ZoneList,
+    ProgramType_fa5940fe,    !- Name
+    RL_Office_27214585;      !- Zone 1 Name
+
+  Lights,
+    Lighting_c6c46226,       !- Name
+    ProgramType_fa5940fe,    !- Zone or ZoneList or Space or SpaceList Name
+    ConstantSchedule_e22c12ab,  !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Lighting Level {W}
+    0,                       !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Return Air Fraction
+    0.32,                    !- Fraction Radiant
+    0.25,                    !- Fraction Visible
+    1,                       !- Fraction Replaceable
+    General;                 !- End-Use Subcategory
+
+  People,
+    People_7e4e38c0,         !- Name
+    ProgramType_fa5940fe,    !- Zone or ZoneList or Space or SpaceList Name
+    ConstantSchedule_e22c12ab,  !- Number of People Schedule Name
+    People/Area,             !- Number of People Calculation Method
+    ,                        !- Number of People
+    0,                       !- People per Floor Area {person/m2}
+    ,                        !- Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    ,                        !- Sensible Heat Fraction
+    Seated Adult Activity;   !- Activity Level Schedule Name
+
+  ElectricEquipment,
+    Equipment_3dadc418,      !- Name
+    ProgramType_fa5940fe,    !- Zone or ZoneList or Space or SpaceList Name
+    ConstantSchedule_dc7fa15c,  !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Design Level {W}
+    2,                       !- Watts per Zone Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    0,                       !- Fraction Radiant
+    0,                       !- Fraction Lost
+    General;                 !- End-Use Subcategory
+
+  ZoneInfiltration:DesignFlowRate,
+    Infiltration_b9be7ecf,   !- Name
+    ProgramType_fa5940fe,    !- Zone or ZoneList or Space or SpaceList Name
+    Always On,               !- Schedule Name
+    Flow/ExteriorArea,       !- Design Flow Rate Calculation Method
+    ,                        !- Design Flow Rate {m3/s}
+    ,                        !- Flow Rate per Floor Area {m3/s-m2}
+    0.0003,                  !- Flow Rate per Exterior Surface Area {m3/s-m2}
+    ,                        !- Air Changes per Hour {1/hr}
+    1,                       !- Constant Term Coefficient
+    0,                       !- Temperature Term Coefficient
+    0,                       !- Velocity Term Coefficient
+    ;                        !- Velocity Squared Term Coefficient
+
+  Output:Variable,*,AFN Zone Infiltration Sensible Heat Gain Energy,Timestep;
+
+  Output:Variable,*,Zone Ideal Loads Zone Total Heating Energy,Timestep;
+
+  Output:Variable,*,Zone Infiltration Total Heat Gain Energy,Timestep;
+
+  Output:Variable,*,Zone Infiltration Total Heat Loss Energy,Timestep;
+
+  Output:Variable,*,Zone Lights Electricity Energy,Timestep;
+
+  Output:Variable,*,Zone Mean Air Temperature,Timestep;
+
+  Output:Variable,*,Zone Mean Radiant Temperature,Timestep;
+
+  Output:Variable,*,Zone Operative Temperature,Timestep;
+
+  Output:Variable,*,Zone People Total Heating Energy,Timestep;
+
+  Output:Variable,*,Zone Ventilation Fan Electricity Energy,Timestep;
+
+  Output:Variable,*,Zone Ventilation Total Heat Gain Energy,Timestep;
+
+  Output:Variable,*,AFN Zone Infiltration Sensible Heat Loss Energy,Timestep;
+
+  Output:Variable,*,Zone Ventilation Total Heat Loss Energy,Timestep;
+
+  Output:Variable,*,Zone Windows Total Transmitted Solar Radiation Energy,Timestep;
+
+  Output:Variable,*,Water Use Equipment Heating Energy,Timestep;
+
+  Output:Variable,*,Zone Air Relative Humidity,Timestep;
+
+  Output:Variable,*,Zone Electric Equipment Electricity Energy,Timestep;
+
+  Output:Variable,*,Zone Gas Equipment NaturalGas Energy,Timestep;
+
+  Output:Variable,*,Zone Ideal Loads Supply Air Total Cooling Energy,Timestep;
+
+  Output:Variable,*,Zone Ideal Loads Supply Air Total Heating Energy,Timestep;
+
+  Output:Variable,*,Zone Ideal Loads Zone Total Cooling Energy,Timestep;
+
+  OutputControl:Table:Style,
+    HTML;                    !- Column Separator
+
+  Output:VariableDictionary,IDF,Unsorted;
+
+  Output:SQLite,
+    SimpleAndTabular;        !- Option Type
+
+  LifeCycleCost:NonrecurringCost,
+    Default Cost,            !- Name
+    Construction,            !- Category
+    0,                       !- Cost
+    ServicePeriod;           !- Start of Costs
+
