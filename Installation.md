@@ -82,4 +82,4 @@ The frontend configuration is contained in a separate file in the frontend direc
 
 
 For more information regarding configurations (e.g. config.ini), please refer to [Error Management]().
-https://ccwi.github.io//indoorclimatesimulation/ErrorManagement.html
+https://ccwi.github.io//indoorclimatesimulation/KnownErrors.html

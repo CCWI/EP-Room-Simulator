@@ -12,7 +12,6 @@ In [Weber et al. 2020](https://dl.acm.org/doi/10.1145/3408308.3431124), the auth
 They propose that an approach which combines real-world data and simulation data can reduce the required real-world training data by half, and in the same time contribute to a more robust model. 
 This tool can provide an arbitrarily large amount of simulation data for this purpose, and it offers users without in-depth technical knowledge towards EnergyPlus to conduct and even automate simulations. 
 
-<br>
 
 <img src="images/Approach.jpg" alt="Deep learning approach for occupancy detection" width="70%">
 
