@@ -8,7 +8,7 @@ permalink: /
 
 # EnergyPlus Room Simulator
 
-
+<br>
 <img src="images/Room.jpg" alt="Screenshot" width="70%">
 
 *Screenshot from the application*
