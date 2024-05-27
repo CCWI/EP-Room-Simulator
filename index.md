@@ -28,7 +28,7 @@ To get an impression of the tool before installing it, you may view the followin
 
 Preparing a Simulation | Running Simulation and Viewing Results
 :-: | :-:
-<video src='https://github.com/CCWI/EP-Room-Simulator/assets/50439280/bf6f2125-4470-466f-a481-45366c657abf' width=120/> | <video src='https://github.com/CCWI/EP-Room-Simulator/assets/50439280/00da33b5-bbf7-45fc-992a-9c9b667bbbb9' width=120/>
+<video src='https://github.com/CCWI/EP-Room-Simulator/assets/50439280/bf6f2125-4470-466f-a481-45366c657abf' width=120></video> | <video src='https://github.com/CCWI/EP-Room-Simulator/assets/50439280/00da33b5-bbf7-45fc-992a-9c9b667bbbb9' width=120></video>
 
 
 
