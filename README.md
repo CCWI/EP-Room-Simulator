@@ -8,16 +8,18 @@ It is divided into a frontend (GUI) and a backend (REST API), which are implemen
 
 <p style="float:left;">
     <img src="frontend/static/frontpage.png" alt="Screenshot Frontpage" style="width:45%;">
-    <img src="frontend/static/resultpage.png" alt="Screenshot Result page" style="width:45%;">
+    <img src="frontend/static/roompage.png" alt="Screenshot Room page", style="width:46%;">
 </p>
 <p style="float:left;">
-  <img src="frontend/static/roompage.png" alt="Screenshot Room page", style="width:45%;">
+  
 </p>
 
 ***
 ## Documentation
 
 Further documentation can be found [here](https://ccwi.github.io/EP-Room-Simulator/). 
+
+You may also watch our [Demo Video](https://ccwi.github.io/EP-Room-Simulator/images/demo_video.mp4). 
 
 ***
 
