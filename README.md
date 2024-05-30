@@ -8,7 +8,7 @@ It is divided into a frontend (GUI) and a backend (REST API), which are implemen
 
 <p style="float:left;">
     <img src="frontend/static/frontpage.png" alt="Screenshot Frontpage" style="width:45%;">
-    <img src="frontend/static/roompage.png" alt="Screenshot Room page", style="width:46%;">
+    <img src="frontend/static/roompage.png" alt="Screenshot Room page", style="width:45%;">
 </p>
 <p style="float:left;">
   
